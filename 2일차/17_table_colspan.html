@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>colspan</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <table border="1">
+        <!--  -->
+        <colgroup>
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+            <col style="width: 100px;">
+            <col style="width: 300px;">
+        </colgroup>
+        <tr>
+            <th>이름</th>
+            <td></td>
+            <th>연락처</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <!-- colspan ="3" 세칸을 합친다. td에 있으므로 열을 합침-->
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

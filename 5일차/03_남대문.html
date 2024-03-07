@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {     /*여백을 없앤다*/
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        form {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        span {
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .imgbox {
+            width: 500px;
+            height: 300px;
+            padding: 10px 0;
+            border-radius: 25px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden; /* 500px 300px 영역에서 벗어나는 부분을 숨김처리*/
+        }
+
+        .imgbox img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .imgbox img:not(:first-child) {     /*not이 붙어있으므로 부정 ==> 첫번째 이미지 박스 클래스의 자식에서 첫번째가 아닌 것들을 숨김처리한다.*/
+            display: none;
+        }
+
+        input[type="radio"] {
+            margin: 10px 0;
+        }
+        /*석굴암이 체크되면 형제인 석굴암 이미지를 보여줌*/
+        input[value="석굴암"]:checked~.imgbox img[alt="석굴암"] { /* ~은 형제.*/
+            display: block;
+        }
+
+        input[value="남대문"]:checked~.imgbox img[alt="남대문"] {
+            display: block;
+        }
+
+        input[value="독립기념관"]:checked~.imgbox img[alt="독립기념관"] {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <form>
+            <div class="view">
+                <input type="radio" name="mun" value="석굴암" checked><span>석굴암</span><br>
+                <input type="radio" name="mun" value="남대문" checked><span>남대문</span><br>
+                <input type="radio" name="mun" value="독립기념관" checked><span>독립기념관</span><br>
+                <div class="imgbox">
+                    <img src="img/석굴암.jpg" alt="석굴암">
+                    <img src="img/남대문.jpg" alt="남대문">
+                    <img src="img/독립기념관.jpg" alt="독립기념관">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

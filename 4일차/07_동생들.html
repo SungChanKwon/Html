@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Tite</title>
+    <style>
+        /* 동생들 모두 ==> a클래스 아래에 있는 모든 동생들에 적용 ==> '제주도', '전라남도' 두개에 적용*/
+        .a~.b {
+            color: red;
+        } 
+        
+
+        /*바로 아래 동생 ==> '제주도'에만 적용*/
+        /*.a + .b {   
+            color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>경기도</li>
+        <ul>
+            <li>수원시</li>
+            <li>안산시</li>
+            <li>화성시</li>
+        </ul>
+        <li class="b">전라남도</li>     
+        <li class="a">경상북도</li>     <!--a아래 있는 애들이 다 동생임-->
+        <li class="b">제주도</li>
+        <li class="b">전라남도</li>
+    </ul>
+</body>
+
+</html>

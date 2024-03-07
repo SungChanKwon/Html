@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").stop().animate({left: "500"},1000);
+            });
+
+            $("#b2").click(function(){
+                $("div").stop().animate({left: "20"},1000)
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>Start Animation</button><br>
+    <button id="b2">Back Animation</button><br>
+
+    <br><br>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+</body>
+
+</html>
